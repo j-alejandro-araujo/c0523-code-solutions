@@ -7,7 +7,7 @@ console.log('typeof area:', typeof area);
 
 const bill = 100;
 const payment = 250;
-const change = bill - payment;
+const change = payment - bill;
 
 console.log('Value of change:', change);
 console.log('typof change:', typeof change);
