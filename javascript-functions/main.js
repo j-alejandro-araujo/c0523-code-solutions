@@ -34,10 +34,9 @@ console.log(
 
 // getLastElement(array)
 function getLastElement(array) {
-  array = ['mango', 'pineapple', 'apples'];
   return array[array.length - 1];
 }
 console.log(
-  'Value of function getLastName w/ argument of mango, pineapple apples:',
-  getLastElement()
+  'Value of function getLastElement w/ argument of mango, pineapple apples:',
+  getLastElement(['mango', 'pineapple', 'apples'])
 );
