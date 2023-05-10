@@ -53,7 +53,7 @@ const css = {
 
 library.push(js);
 library.unshift(css);
-library.splice(0, 1);
+library.splice(1, 0);
 
 console.log('Value of library:', library);
 
