@@ -21,15 +21,15 @@ console.log('Value of function getArea w/ argument of 4, 36:', getArea(4, 36));
 
 // getFirstName(person)
 function getFirstName(person) {
-  person = {
-    firstName: 'Jesus',
-    lastName: 'Araujo',
-  };
   return person.firstName;
 }
+const person = {
+  firstName: 'Jesus',
+  lastName: 'Araujo',
+};
 console.log(
   'Value of getFirstName w/ argument of Jesus, Araujo:',
-  getFirstName()
+  getFirstName(person)
 );
 
 // getLastElement(array)
