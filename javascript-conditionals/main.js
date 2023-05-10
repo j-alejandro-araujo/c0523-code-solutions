@@ -15,6 +15,7 @@ function isUnderFive(number) {
     return true;
   } else return false;
 }
+console.log('Value of isUnderFive(8):', isUnderFive(8));
 
 // isEven(number)
 function isEven(number) {
@@ -22,6 +23,7 @@ function isEven(number) {
     return true;
   } else return false;
 }
+console.log('Value of isEven(4):', isEven(4));
 
 // startsWithJ(string)
 function startsWithJ(string) {
@@ -29,6 +31,7 @@ function startsWithJ(string) {
     return true;
   } else return false;
 }
+console.log('Value of sartsWithJ(Jon):', startsWithJ('Jon'));
 
 // isOldEnoughToDrink(person)
 function isOldEnoughToDrink(person) {
@@ -37,19 +40,31 @@ function isOldEnoughToDrink(person) {
   } else return false;
 }
 
+const jon = {
+  name: 'Jon',
+  age: 33,
+};
+
+console.log('Value of isOldEnoughToDrink(33):', isOldEnoughToDrink(jon));
+
 // isOldEnoughToDrive(person)
 function isOldEnoughToDrive(person) {
   if (person.age >= 16) {
     return true;
   } else return false;
 }
+console.log('Value of isOldEnoughToDrive(33):', isOldEnoughToDrive(jon));
 
 // isOldEnoughToDrinkAndDrive(person)
 function isOldEnoughToDrinkAndDrive(person) {
-  if (isOldEnoughToDrink === true && isOldEnoughToDrive === true) {
+  if (person.age >= 21 && person.age >= 16) {
     return false;
   }
 }
+console.log(
+  'Value of isOldEnoughToDrinkAndDrive(33):',
+  isOldEnoughToDrinkAndDrive(jon)
+);
 
 // categorizeAcidity(ph)
 function categorizeAcidity(pH) {
@@ -63,6 +78,7 @@ function categorizeAcidity(pH) {
     return 'invalid pH level';
   }
 }
+console.log('Value of categorizeAcidity(9):', categorizeAcidity(9));
 
 // introduceWarnerBro(name)
 function introduceWarnerBro(name) {
@@ -80,6 +96,7 @@ function introduceWarnerBro(name) {
       console.log('Goodnight everybody!');
   }
 }
+introduceWarnerBro('dot');
 
 // recommentMovie(genre)
 function recommendMovie(genre) {
@@ -108,3 +125,4 @@ function recommendMovie(genre) {
       );
   }
 }
+recommendMovie('comedy');
