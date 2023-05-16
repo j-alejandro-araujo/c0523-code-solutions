@@ -1,0 +1,99 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>HTML Forms</title>
+
+    <style>
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+      }
+      label[for='html'],
+      label[for='css'],
+      label[for='javascript'] {
+        display: contents;
+        flex-direction: row;
+      }
+      label[for='signup'] {
+        display: contents;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Coding Form!</h1>
+
+      <section>
+        <!--Email Address Field Section-->
+        <p>
+          <label>
+            Email:
+            <input type="email" id="email" name="email" />
+          </label>
+        </p>
+      </section>
+
+      <section>
+        <!--Select (Dropdown) Element Section-->
+        <p>
+          <label>
+            Why is coding cool?
+            <select id="option" name="option">
+              <option value="option">Select an option</option>
+              <option value="interesting">Because it's interesting</option>
+              <option value="fun">Becuase it's fun</option>
+              <option value="powerful">Because it's powerful</option>
+            </select>
+          </label>
+        </p>
+      </section>
+
+      <section>
+        <!---Section Element-->
+        <p>
+          Favorite Language (choose one)
+          <br />
+          <br />
+          <input type="radio" id="html" name="coding language" value="html" />
+          <label for="html">HTML</label>
+          <input type="radio" id="css" name="coding language" value="css" />
+          <label for="css">CSS</label>
+          <input
+            type="radio"
+            id="javascript"
+            name="coding language"
+            value="javascript" />
+          <label for="javascript">JavaScript</label>
+        </p>
+      </section>
+
+      <section>
+        <!--Checkbox Type Section-->
+        <p>
+          Would you like to sign up for more information?
+          <br />
+          <br />
+          <input type="checkbox" id="signup" name="signup" />
+          <label for="signup">Sign me up!</label>
+        </p>
+      </section>
+
+      <section>
+        <!--TextArea Comment Section-->
+        <label for="cmt">Comments</label>
+        <textarea id="cmt" name="text_comment" rows="10" cols="30"></textarea>
+      </section>
+
+      <section>
+        <!--Submit Button Section-->
+        <button type="submit">Submit</button>
+      </section>
+    </form>
+  </body>
+</html>
