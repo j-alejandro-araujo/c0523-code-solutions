@@ -5,18 +5,19 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is the **default** value for the `position` property of HTML elements?
-
+  Static position is the default.
 - How does setting `position: relative` on an element affect document flow?
-
+  It will make the element overlap with other elements on the page.
 - How does setting `position: relative` on an element affect where it appears on the page?
-
+  It stays in it's normal position, but you can modify it's position using offset properties.
 - How does setting `position: absolute` on an element affect document flow?
-
+  It no longer exists in document flow.
 - How does setting `position: absolute` on an element affect where it appears on the page?
-
+  It can be positioned anywhere on the page an stay isolated like pop-up windows.
 - How do you constrain an absolutely positioned element to a containing block?
-
+  By utilizing an absolute position element.
 - What are the four box offset properties?
+  Top, right, left, bottom.
 
 ## Notes
 
