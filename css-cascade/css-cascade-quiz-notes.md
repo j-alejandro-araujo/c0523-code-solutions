@@ -11,7 +11,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - How is it possible for the styles of an element to be applied to its children as well without an additional CSS rule?
   Via inheritance
 - List the three selector types in order of increasing specificity.
-  ID, Class, Type
+  Type, ID, Class
 - Why is using `!important` considered bad practice?
   Because it reverses the cascade order of stylesheets.
 
