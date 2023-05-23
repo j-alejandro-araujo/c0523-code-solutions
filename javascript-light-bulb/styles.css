@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.page-container {
+  height: 100vh;
+  background-color: #fef9f1;
+}
+
+.row {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sphere-column {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgb(234, 234, 18);
+  box-shadow: 0 0 35px #fab649a0;
+}
+
+.instance-change {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #232525;
+  box-shadow: 0 0 35px #ecececa0;
+}
+
+.background-change {
+  background-color: black;
+}
