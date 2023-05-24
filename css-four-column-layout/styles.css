@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  font-family: Barlow, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8fa;
+}
+
+body {
+  padding: 0 100px;
+}
+
+h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+h3 {
+  font-size: 16px;
+  padding-bottom: 25px;
+}
+
+p {
+  font-size: 12px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.content-container {
+  display: flex;
+}
+
+.phone-images {
+  width: 100%;
+}
+
+.icon-images {
+  width: 25%;
+  padding: 5px 0;
+}
