@@ -4,11 +4,11 @@ let count = 4;
 function updateCountdown() {
   if (count === 0) {
     $countdownDisplay.textContent = `~Earth Beeeelooowww~`;
-    clearInterval();
+    clearInterval(intervalID);
   } else {
     $countdownDisplay.textContent = count;
     count--;
   }
 }
 
-setInterval(updateCountdown, 1000);
+const intervalID = setInterval(updateCountdown, 1000);
