@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+span {
+  display: inline-block;
+}
+
+span.active {
+  text-decoration: underline;
+}
+
+span.correct {
+  color: green;
+}
+
+span.wrong {
+  color: red;
+}
