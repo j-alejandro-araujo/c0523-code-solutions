@@ -4,19 +4,19 @@ const business = {
   totalEmployees: 4,
   daysOpen: ['M', 'T', 'W', 'Th', 'F'],
   employees: {
-    Frodo: {
+    frodo: {
       position: 'Groundskeeper',
       daysOfWeekWorking: ['M', 'T', 'W', 'Th', 'F'],
     },
-    Sam: {
+    sam: {
       position: 'Gardener',
       daysOfWeekWorking: ['M', 'F'],
     },
-    Treebeard: {
+    treebeard: {
       position: 'Floral Manager',
       daysOfWeekWorking: ['M', 'W'],
     },
-    Gandalf: {
+    gandalf: {
       position: 'Wizard',
       daysOfWeekWorking: ['M', 'W', 'F'],
     },
@@ -40,7 +40,7 @@ function addWeekendsToEmployees() {
 function setFullTime() {
   for (const key in business.employees) {
     const employee = business.employees[key];
-    const isFullTime = employee.daysOfWeekWorking.length > 5;
+    const isFullTime = employee.daysOfWeekWorking.length >= 5;
     employee.fullTime = isFullTime;
   }
 }
@@ -90,7 +90,7 @@ function addNewEmployees() {
 
         workdays.push('S', 'Sun');
 
-        const isFullTime = workdays.length > 5;
+        const isFullTime = workdays.length >= 5;
 
         const newEmployee = {
           position: jobTitle,
