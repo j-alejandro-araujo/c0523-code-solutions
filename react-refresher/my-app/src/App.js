@@ -1,15 +1,16 @@
 import './App.css';
 import { React, useState } from 'react';
+import Buttons from './Buttons';
 
 function App() {
   const [counter, setCounter] = useState(0);
 
   const increase = () => {
-    setCounter((count) => count + 1);
+    setCounter(counter + 1);
   };
 
   const decrease = () => {
-    setCounter((count) => count - 1);
+    setCounter(counter - 1);
   };
 
   return (
@@ -18,14 +19,7 @@ function App() {
         <h1>COUNTER</h1>
       </header>
       <span className="counter_number">{counter}</span>
-      <div className="buttons-container">
-        <button className="down-btn" onClick={decrease}>
-          DOWN
-        </button>
-        <button className="up-btn" onClick={increase}>
-          UP
-        </button>
-      </div>
+      <Buttons increase={increase} decrease={decrease} />
     </div>
   );
 }
