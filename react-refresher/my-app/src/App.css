@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.counter {
+  width: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.counter_number {
+  font-size: 34px;
+  padding: 1rem;
+}
+
+.up-btn,
+.down-btn {
+  font-size: 22px;
+  padding: 10px 30px;
+  border: none;
+  background-color: bisque;
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+
+.up-btn:hover,
+.down-btn:hover {
+  cursor: pointer;
+}
+
+.up-btn:active,
+.down-btn:active {
+  background-color: rgb(255, 208, 150);
+}
