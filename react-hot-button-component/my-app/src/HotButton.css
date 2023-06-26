@@ -1,0 +1,17 @@
+.btn-count {
+  font-size: 30px;
+  color: black;
+}
+
+.hot-button {
+  padding: 15px 40px;
+  color: white;
+  font-size: 22px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 25px;
+}
+
+.hot-button:hover {
+  cursor: pointer;
+}
