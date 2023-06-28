@@ -1,25 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Banner from './Banner';
+import NextButton from './NextButton';
+import PrevButton from './PrevButton';
+import Indicators from './Indicators';
 
-const RotatingBanner = ({ items }) => {
+export default function RotatingBanner({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === items.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  };
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [items]);
+  const handlePrev = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + items.length) % items.length
+    );
+  };
+
+  const handleIndicatorClick = (index) => {
+    setCurrentIndex(index);
+  };
 
   return (
-    <div className="rotating-banner">
-      <h1>{items[currentIndex]}</h1>
+    <div>
+      <Banner item={items[currentIndex]} />
+      <PrevButton onClick={handlePrev} />
+      <Indicators
+        count={items.length}
+        currentIndex={currentIndex}
+        onClick={handleIndicatorClick}
+      />
+      <NextButton onClick={handleNext} />
     </div>
   );
-};
-
-export default RotatingBanner;
+}

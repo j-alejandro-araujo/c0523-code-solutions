@@ -1,7 +1,11 @@
 import React from 'react';
 
-const PrevButton = () => {
-  return <button>PREV</button>;
-};
-
-export default PrevButton;
+export default function PrevButton({ onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{ padding: '1rem 2rem', fontSize: '22px' }}>
+      PREV
+    </button>
+  );
+}

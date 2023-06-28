@@ -1,16 +1,23 @@
 import React from 'react';
 
-const Indicators = () => {
-  return (
-    <div>
-      <button>0</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
-    </div>
-  );
-};
+export default function Indicators({ count, currentIndex, onClick }) {
+  const handleIndicatorClick = (index) => {
+    onClick(index);
+  };
 
-export default Indicators;
+  const indicators = Array.from({ length: count }, (_, index) => (
+    <button
+      key={index}
+      className={index === currentIndex ? 'active' : ''}
+      onClick={() => handleIndicatorClick(index)}
+      style={{
+        padding: '1rem',
+        fontSize: '20px',
+        fontWeight: 'bolder',
+        backgroundColor: index === currentIndex ? 'green' : '',
+      }}>
+      {index}
+    </button>
+  ));
+  return <div>{indicators}</div>;
+}

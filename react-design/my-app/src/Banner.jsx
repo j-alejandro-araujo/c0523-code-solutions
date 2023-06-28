@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Banner = () => {
-  return <div>Banner Content</div>;
-};
-
-export default Banner;
+export default function Banner({ item }) {
+  return <div style={{ fontSize: '40px', marginBottom: '2rem' }}>{item}</div>;
+}

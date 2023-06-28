@@ -1,7 +1,11 @@
 import React from 'react';
 
-const NextButton = () => {
-  return <button>NEXT</button>;
-};
-
-export default NextButton;
+export default function NextButton({ onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{ padding: '1rem 2rem', fontSize: '22px' }}>
+      NEXT
+    </button>
+  );
+}
