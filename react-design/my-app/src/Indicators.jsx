@@ -12,7 +12,7 @@ export default function Indicators({ count, currentIndex, onClick }) {
       onClick={() => handleIndicatorClick(index)}
       style={{
         padding: '1rem',
-        fontSize: '20px',
+        fontSize: '1rem',
         fontWeight: 'bolder',
         backgroundColor: index === currentIndex ? 'green' : '',
       }}>
