@@ -19,9 +19,9 @@
 }
 
 .validated-input i {
-  position: absolute;
-  left: 32rem;
-  top: 3.5rem;
+  position: relative;
+  bottom: 2.5rem;
+  left: 9rem;
   font-size: 1.75rem;
   color: red;
 }

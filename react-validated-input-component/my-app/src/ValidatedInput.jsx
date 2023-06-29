@@ -3,7 +3,7 @@ import './ValidatedInput.css';
 
 export default function ValidatedInput() {
   const [password, setPassword] = useState('');
-  const [isValid, setIsValid] = useState(false);
+  const [isValid, setIsValid] = useState();
 
   const handleChange = (event) => {
     const input = event.target.value;
@@ -13,8 +13,11 @@ export default function ValidatedInput() {
 
   return (
     <div className="validated-input">
-      <label className="password-text">Password</label>
+      <label htmlFor="password-input" className="password-text">
+        Password
+      </label>
       <input
+        id="password-input"
         type="password"
         value={password}
         onChange={handleChange}
