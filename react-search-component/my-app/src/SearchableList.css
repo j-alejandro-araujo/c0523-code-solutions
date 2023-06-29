@@ -1,0 +1,14 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+#search-here {
+  width: 20rem;
+}
+
+.search-header {
+  font-weight: bolder;
+}
