@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import './SearchableList.css';
 
-export default function SearchableList({ items }) {
+export default function SearchableList({ strings }) {
   const [filterTerm, setFilterTerm] = useState('');
 
   const handleFilter = (event) => {
     setFilterTerm(event.target.value);
   };
 
-  const filteredItems = items.filter((item) =>
-    item.toLowerCase().includes(filterTerm.toLowerCase())
+  const filteredItems = strings.filter((string) =>
+    string.toLowerCase().includes(filterTerm.toLowerCase())
   );
 
   return (
@@ -24,10 +24,11 @@ export default function SearchableList({ items }) {
         value={filterTerm}
         onChange={handleFilter}
       />
+      <i className="fas fa-search search-icon"></i>
       {filteredItems.length > 0 ? (
         <ul>
-          {filteredItems.map((item, index) => (
-            <li key={index}>{item}</li>
+          {filteredItems.map((string, index) => (
+            <li key={index}>{string}</li>
           ))}
         </ul>
       ) : (

@@ -1,7 +1,7 @@
 import './App.css';
 import SearchableList from './SearchableList';
 
-const items = [
+const strings = [
   'May the Force be with you.',
   "Here's looking at you, kid.",
   'Hasta la vista, baby.',
@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <SearchableList items={items} />
+        <SearchableList strings={strings} />
       </header>
     </div>
   );
