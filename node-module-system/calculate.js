@@ -18,7 +18,7 @@ if (operator === 'plus') {
 } else if (operator === 'over') {
   result = divide(num1, num2);
 } else {
-  result = 'ERROR';
+  result = `ERROR: ${num1} ${operator} ${num2}`;
 }
 
 console.log(`result: ${result}`);
