@@ -2,29 +2,21 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { FaArrowLeft, FaArrowRight, FaCircle } from 'react-icons/fa';
 import './Carousel.css';
 
-const images = [
-  '/images/001.png',
-  '/images/004.png',
-  '/images/007.png',
-  '/images/025.png',
-  '/images/039.png',
-];
-
-export default function Carousel() {
+export default function Carousel({ images }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  }, []);
+  }, [images.length]);
 
   const prevSlide = useCallback(() => {
     setCurrentSlide(
       (prevSlide) => (prevSlide - 1 + images.length) % images.length
     );
-  }, []);
+  }, [images.length]);
 
   useEffect(() => {
-    let interval = setInterval(() => {
+    const interval = setInterval(() => {
       nextSlide();
     }, 3000);
     return () => clearInterval(interval);
@@ -32,7 +24,7 @@ export default function Carousel() {
 
   const handleSlideClick = useCallback(
     (index) => {
-      let interval = setInterval(nextSlide, 3000);
+      const interval = setInterval(nextSlide);
       setCurrentSlide(index);
       clearInterval(interval);
     },
