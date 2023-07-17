@@ -9,21 +9,23 @@ export default function User({ userId, onCancel }) {
 
   /* your code here (hint: useEffect) */
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users/' + userId)
-      .then((response) => {
+    async function fetchData() {
+      try {
+        const response = await fetch(
+          'https://jsonplaceholder.typicode.com/users/' + userId
+        );
         if (!response.ok) {
           throw new Error(`Returned ${response.status} status.`);
         }
-        return response.json();
-      })
-      .then((data) => {
+        const data = await response.json();
         setUser(data);
         setIsLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         setError(error);
         setIsLoading(false);
-      });
+      }
+    }
+    fetchData();
   }, [userId]);
 
   if (isLoading) {
