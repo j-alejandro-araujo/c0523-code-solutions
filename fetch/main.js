@@ -1,13 +1,16 @@
-fetch('https://pokeapi.co/api/v2/pokemon/1')
-  .then((response) => {
+async function fetchPokemonData() {
+  try {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/1');
+
     if (!response.ok) {
       throw new Error(`Server returned ${response.status} status.`);
     }
-    return response.json();
-  })
-  .then((data) => {
+
+    const data = await response.json();
     console.log('Pokemon Data:', data);
-  })
-  .catch((error) => {
+  } catch (error) {
     console.log('Error:', error.message);
-  });
+  }
+}
+
+fetchPokemonData();
