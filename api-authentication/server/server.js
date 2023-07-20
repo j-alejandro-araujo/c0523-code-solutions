@@ -72,6 +72,11 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
       throw new ClientError(401, 'Invalid login.');
     }
 
+    const { userId, hashedPassword } = user;
+    if (!(await argon2.verify(hashedPassword, password))) {
+      throw new ClientError(401, 'Invalid login');
+    }
+
     const payload = {
       userId: user.userId,
       username: user.username,
